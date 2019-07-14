@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3938659B22DBC6D900EA6C99 /* FooBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3938659822DBC6D900EA6C99 /* FooBridge.cpp */; };
+		39647AB022DBD0DD005C54DF /* nativemobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39647AAF22DBD0DD005C54DF /* nativemobile.framework */; };
+		39647AB222DBD0E3005C54DF /* nativemobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39647AAF22DBD0DD005C54DF /* nativemobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39A6063422DB8FBE00BD4783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6063322DB8FBE00BD4783 /* AppDelegate.swift */; };
 		39A6063622DB8FBE00BD4783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6063522DB8FBE00BD4783 /* ViewController.swift */; };
 		39A6063922DB8FBE00BD4783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A6063722DB8FBE00BD4783 /* Main.storyboard */; };
@@ -33,7 +36,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		39647AB322DBD0E3005C54DF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				39647AB222DBD0E3005C54DF /* nativemobile.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3938659822DBC6D900EA6C99 /* FooBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FooBridge.cpp; sourceTree = "<group>"; };
+		3938659A22DBC6D900EA6C99 /* FooBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooBridge.h; sourceTree = "<group>"; };
+		3938659E22DBC7AB00EA6C99 /* IOSNativeBasedSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOSNativeBasedSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		39647AAF22DBD0DD005C54DF /* nativemobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nativemobile.framework; sourceTree = "<group>"; };
 		39A6063022DB8FBE00BD4783 /* IOSNativeBasedSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSNativeBasedSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A6063322DB8FBE00BD4783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39A6063522DB8FBE00BD4783 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39647AB022DBD0DD005C54DF /* nativemobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39647AA522DBCF0C005C54DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39647AAF22DBD0DD005C54DF /* nativemobile.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		39A6062722DB8FBE00BD4783 = {
 			isa = PBXGroup;
 			children = (
+				39647AA522DBCF0C005C54DF /* Frameworks */,
 				39A6063222DB8FBE00BD4783 /* IOSNativeBasedSample */,
 				39A6064722DB8FBF00BD4783 /* IOSNativeBasedSampleTests */,
 				39A6065222DB8FBF00BD4783 /* IOSNativeBasedSampleUITests */,
@@ -97,12 +128,15 @@
 		39A6063222DB8FBE00BD4783 /* IOSNativeBasedSample */ = {
 			isa = PBXGroup;
 			children = (
+				3938659822DBC6D900EA6C99 /* FooBridge.cpp */,
+				3938659A22DBC6D900EA6C99 /* FooBridge.h */,
 				39A6063322DB8FBE00BD4783 /* AppDelegate.swift */,
 				39A6063522DB8FBE00BD4783 /* ViewController.swift */,
 				39A6063722DB8FBE00BD4783 /* Main.storyboard */,
 				39A6063A22DB8FBF00BD4783 /* Assets.xcassets */,
 				39A6063C22DB8FBF00BD4783 /* LaunchScreen.storyboard */,
 				39A6063F22DB8FBF00BD4783 /* Info.plist */,
+				3938659E22DBC7AB00EA6C99 /* IOSNativeBasedSample-Bridging-Header.h */,
 			);
 			path = IOSNativeBasedSample;
 			sourceTree = "<group>";
@@ -135,6 +169,7 @@
 				39A6062C22DB8FBE00BD4783 /* Sources */,
 				39A6062D22DB8FBE00BD4783 /* Frameworks */,
 				39A6062E22DB8FBE00BD4783 /* Resources */,
+				39647AB322DBD0E3005C54DF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +228,7 @@
 				TargetAttributes = {
 					39A6062F22DB8FBE00BD4783 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					39A6064322DB8FBF00BD4783 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -256,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3938659B22DBC6D900EA6C99 /* FooBridge.cpp in Sources */,
 				39A6063622DB8FBE00BD4783 /* ViewController.swift in Sources */,
 				39A6063422DB8FBE00BD4783 /* AppDelegate.swift in Sources */,
 			);
@@ -432,7 +469,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = IOSNativeBasedSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +482,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fondesa.IOSNativeBasedSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IOSNativeBasedSample/IOSNativeBasedSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,7 +493,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = IOSNativeBasedSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +506,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fondesa.IOSNativeBasedSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IOSNativeBasedSample/IOSNativeBasedSample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

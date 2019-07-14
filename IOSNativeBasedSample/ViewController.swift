@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let input = "hello"
+        let output = foo(input)!
+        labelView.text = String(cString: output)
+        output.deallocate()
     }
 }
